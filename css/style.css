@@ -1,0 +1,40 @@
+/* Combinadores CSS */
+nav ul li a:hover {
+  color: #ffc107;
+}
+
+.card-body h5 + p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Funções CSS */
+body {
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+.card-img-top {
+  filter: brightness(90%);
+}
+.card-body h5 + p {
+  font-size: clamp(0.9rem, 2vw, 1rem); /* função CSS */
+  color: hsl(210, 10%, 40%);           /* função CSS */
+}
+
+ .produto-card {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .produto-card img {
+      max-width: 100px;
+      margin: 10px;
+    }
+
+    .ver-mais {
+      margin-top: 20px;
+    }
+
