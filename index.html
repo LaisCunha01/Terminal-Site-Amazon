@@ -159,7 +159,7 @@
 
   </section>
     <section class="category-carousel">
-  <h3>Navegue pelas categorias, de A a Z</h3>
+  <h3>Navegue pelas categorias, de Z a A</h3>
   <div class="carousel-wrapper">
     <button class="carousel-btn prev">&lt;</button>
     <div class="carousel-container">
@@ -168,11 +168,97 @@
         <p>Dispositivos Amazon</p>
       </div>
       <div class="category-item">
-        <img src="imagem2.jpg" alt="Mercado" />
+        <img src="imagem/mercado.jpg" alt="Mercado" />
         <p>Mercado</p>
       </div>
-      <!-- Repita para outras categorias -->
+      <div class="category-item">
+        <img src="imagem/livros.jpg" alt="Livros" />
+        <p>Livros</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/ebooks.jpg" alt="ebooks" />
+        <p>ebooks</p>
+      </div>
+    <div class="category-item">
+        <img src="imagem/computer.jpg" alt="Computadores e Informática" />
+        <p>Computadores e informatica</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/cuidados pessoais.jpg" alt="Cuidados Pessoais" />
+        <p>Cuidados Pessoais</p>
+      </div>
+       <div class="category-item">
+        <img src="imagem/compras internacionais.jpg" alt="Compras Internacionais" />
+        <p>Compras Internacionais</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/games e consoles.jpg" alt="Games e consoles" />
+        <p>Games e Consoles</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/compras internacionais.jpg" alt="Cozinha" />
+        <p>Cozinha</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/compras internacionais.jpg" alt="Brinquedos e Jogos" />
+        <p>Brinquedos e Jogos</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/bebes.jpg" alt="Compras Internacionais" />
+        <p>Bebês</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/papelaria e escritorio.jpg" alt="Papelaria e Escritorio" />
+        <p>Papelaria e Escritorio</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/compras internacionais.jpg" alt="Alimentos e bebidas" />
+        <p>Alimentos e bebidas</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/eletronicos.jpg" alt="Eletrônicos" />
+        <p>Eletrônicos</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/ferramentas.jpg" alt="Ferramentas e Construção" />
+        <p>Ferramentas e Construção</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/casa.jpg" alt="Casa" />
+        <p>Casa</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/beleza.png" alt="Beleza" />
+        <p>Beleza</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/bebidas alcoolicas.jpg" alt="Bebidas Alcoólicas" />
+        <p>Bebidas Alcoólicas</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/jardim e piscina.jpg" alt="Jardim e Piscina" />
+        <p>Jardim e Piscina</p>
+      </div>  
+      <div class="category-item">
+        <img src="imagem/pet shop.jpg" alt="Pet Shop" />
+        <p>Pet Shop</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/casa inteligente.jpg" alt="Casa inteligente" />
+        <p>Casa inteligente</p>
+      </div>                      
+      <div class="category-item">
+        <img src="imagem/cd e vinil.jpg" alt="CD e Vinil" />
+        <p>CD e Vinil</p>
     </div>
+      <div class="category-item">
+        <img src="imagem/moda.jpg" alt="Moda" />
+        <p>Moda</p>
+      </div>
+      <div class="category-item">
+        <img src="imagem/esportes.jpg" alt="Esportes e Aventuras" />
+        <p>Esportes e Aventura</p>
+      </div>
     <button class="carousel-btn next">&gt;</button>
   </div>
 </section>
@@ -225,5 +311,16 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>const container = document.querySelector('.carousel-container');
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      const scrollAmount = 120;
+    prevBtn.addEventListener('click', () => {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+    nextBtn.addEventListener('click', () => {
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+  </script>
 </body>
 </html>
