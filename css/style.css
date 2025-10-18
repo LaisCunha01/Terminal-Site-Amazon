@@ -84,6 +84,7 @@
      border-radius:6px;
      cursor:pointer;
    }
+
    .account, .orders, .cart{
      min-width:72px;
      text-align:center;
@@ -153,7 +154,6 @@
    }
    .carousel button {
      pointer-events:auto;
-     background:rgba(0,0,0,0.35);
      color:#fff;
      border:none;
      padding:8px 10px;
