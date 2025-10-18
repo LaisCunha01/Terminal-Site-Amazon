@@ -1,40 +1,254 @@
-/* Combinadores CSS */
-nav ul li a:hover {
-  color: #ffc107;
-}
-
-.card-body h5 + p {
-  font-size: 0.9rem;
-  color: gray;
-}
-
-/* Funções CSS */
-body {
-  background-color: rgba(245, 245, 245, 0.9);
-}
-
-.card-img-top {
-  filter: brightness(90%);
-}
-.card-body h5 + p {
-  font-size: clamp(0.9rem, 2vw, 1rem); /* função CSS */
-  color: hsl(210, 10%, 40%);           /* função CSS */
-}
-
- .produto-card {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .produto-card img {
-      max-width: 100px;
-      margin: 10px;
-    }
-
-    .ver-mais {
-      margin-top: 20px;
-    }
-
+:root{
+     --brand:#232f3e;      /* cor estilo Amazon (não é logo) */
+     --accent:#ff9900;
+     --muted:#6b7280;
+     --bg:#f3f4f6;
+     --card:#ffffff;
+     --maxw:1200px;
+     --radius:8px;
+     --shadow: 0 2px 6px rgba(0,0,0,0.08);
+     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+   }
+   *{box-sizing:border-box}
+   body{
+     margin:0;
+     background:var(--bg);
+     color:#111827;
+     -webkit-font-smoothing:antialiased;
+     -moz-osx-font-smoothing:grayscale;
+   }
+   /* Top bar (informações pequenas) */
+   .topbar{
+     background:#131921;
+     color:#fff;
+     font-size:13px;
+     padding:6px 12px;
+   }
+   .topbar .container{
+     max-width:var(--maxw);
+     margin:auto;
+     display:flex;
+     align-items:center;
+     justify-content:space-between;
+   }
+   /* Header principal */
+   header{
+     background:linear-gradient(180deg,#ffffff, #ffffff);
+     border-bottom:1px solid #e6e6e6;
+   }
+   .header-inner{
+     max-width:var(--maxw);
+     margin:auto;
+     display:flex;
+     gap:160px;
+     padding:120px;
+     align-items:center;
+   }
+   .logo{
+     display:flex;
+     align-items:center;
+     gap:8px;
+     text-decoration:none;
+     color:var(--brand);
+     font-weight:700;
+     font-size:20px;
+   }
+   .logo .mark{
+     width:38px;height:28px;
+     background:linear-gradient(135deg,var(--accent),#ffb84d);
+     border-radius:4px;
+     display:inline-block;
+     box-shadow: var(--shadow);
+   }
+   /* Busca */
+   .search{
+     flex:1;
+     display:flex;
+     gap:8px;
+     align-items:center;
+   }
+   .search input[type="search"]{
+     width:100%;
+     padding:12px 14px;
+     font-size:15px;
+     border:1px solid #d1d5db;
+     border-radius:6px;
+     outline:none;
+   }
+   .search button{
+     background:var(--accent);
+     border:none;
+     color:#111;
+     padding:12px 14px;
+     font-weight:600;
+     border-radius:6px;
+     cursor:pointer;
+   }
+   .account, .orders, .cart{
+     min-width:72px;
+     text-align:center;
+     font-size:13px;
+     color:var(--muted);
+   }
+   .cart{
+     color:var(--brand);
+     font-weight:600;
+   }
+   /* Nav secundária */
+   nav.main-nav{
+     background:#374151;
+     color:#fff;
+     padding: 16px 12px;
+   }
+   nav .nav-inner{
+     max-width:var(--maxw);
+     margin:auto;
+     display:flex;
+     gap:12px;
+     align-items:center;
+     overflow:auto;
+   }
+   nav a{
+     color:#fff;
+     text-decoration:none;
+     font-size:14px;
+     white-space:nowrap;
+     padding:6px 8px;
+   }
+   /* Layout principal */
+   .container{
+     max-width:var(--maxw);
+     margin:auto;
+     padding:18px 12px;
+   }
+   /* Carrossel */
+   .hero{
+     display:grid;
+     grid-template-columns: 1fr 320px;
+     gap:16px;
+     align-items:start;
+     margin: bottom 150px;
+   }
+   .carousel{
+     position:relative;
+     background:var(--card);
+     border-radius:var(--radius);
+     overflow:hidden;
+     box-shadow:var(--shadow);
+     min-height:250px;
+   }
+   .carousel img{
+     width: 950px;;
+     height: 900px;
+     object-fit:cover;
+     display:block;
+   }
+   .carousel .controls{
+     position:absolute;
+     inset:0;
+     display:flex;
+     align-items:center;
+     justify-content:space-between;
+     pointer-events:none;
+   }
+   .carousel button {
+     pointer-events:auto;
+     background:rgba(0,0,0,0.35);
+     color:#fff;
+     border:none;
+     padding:8px 10px;
+     margin:12px;
+     border-radius:6px;
+     cursor:pointer;
+   }
+   .promo{
+     background:linear-gradient(180deg,#fff,#f8fafc);
+     padding:16px;
+     border-radius:var(--radius);
+     box-shadow:var(--shadow);
+     height:100%;
+   }
+   .promo h3{margin:0 0 8px 0}
+   .promo p{margin:0;color:var(--muted);font-size:14px}
+   /* Product grid */
+   .section-title{
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     margin:14px 0;
+   }
+   .grid{
+     display:grid;
+     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+     gap:12px;
+   }
+   .card{
+     background:var(--card);
+     border-radius:8px;
+     padding:10px;
+     box-shadow:var(--shadow);
+     display:flex;
+     flex-direction:column;
+     gap:10px;
+   }
+   .card img{
+     width:100%;
+     height:140px;
+     object-fit:contain;
+     background:linear-gradient(180deg,#fafafa,#fff);
+     border-radius:6px;
+   }
+   .card .title{
+     font-size:14px;
+     line-height:1.2;
+     color:#111827;
+     flex:1;
+   }
+   .price{
+     font-weight:700;
+     color:var(--brand);
+     font-size:16px;
+   }
+   .rating{
+     font-size:13px;
+     color: #b87e00;
+   }
+   .buy{
+     display:inline-block;
+     text-align:center;
+     padding:8px 10px;
+     border-radius:6px;
+     background:var(--accent);
+     text-decoration:none;
+     color:#111;
+     font-weight:600;
+     margin-top:6px;
+   }
+   /* Footer */
+   footer{
+     margin-top:28px;
+     background:#0f1724;
+     color:#cbd5e1;
+     padding:24px 12px;
+   }
+   footer .footer-inner{
+     max-width:var(--maxw);
+     margin:auto;
+     display:flex;
+     gap:20px;
+     flex-wrap:wrap;
+   }
+   footer h4{color:#fff;margin:0 0 8px 0}
+   footer a{color:#cbd5e1;text-decoration:none;font-size:14px}
+   /* Responsividade */
+   @media (max-width:900px){
+     .hero{grid-template-columns:1fr;}
+     .header-inner{padding:10px}
+     .search input[type="search"]{padding:10px}
+     .card img{height:120px}
+   }
+   @media (max-width:520px){
+     .header-inner{flex-direction:column; align-items:stretch; gap:10px}
+     .topbar .container{flex-direction:column; gap:6px; align-items:flex-start}
+     nav .nav-inner{overflow:auto;padding-bottom:6px}
+   }
