@@ -224,6 +224,55 @@
      font-weight:600;
      margin-top:6px;
    }
+    .category-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+    .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 10px 0;
+      width: 100%;
+  }
+
+    .category-item {
+      flex: 0 0 auto;
+      text-align: center;
+  }
+
+    .category-item img {
+       width: 100px;
+      height: 100px;
+      border-radius: 50%; /* deixa a imagem redonda */
+      object-fit: cover;
+      border: 2px solid #ddd;
+  }
+
+    .carousel-btn {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 5px 10px;
+      cursor: pointer;
+      user-select: none;
+  }
+
+    .carousel-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+  }
+
    /* Footer */
    footer{
      margin-top:28px;
